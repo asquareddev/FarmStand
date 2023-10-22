@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Products</title>
+</head>
+<body>
+    <div class="container">
+        <div class="center-div">
+            <h1>All Found Products</h1>
+    <ul>
+        <% for( let p of products ) { %>
+            <h2><li><%- p.name %> <a href="/products/<%- p._id.toString() %>">details</a></li></h2>
+        <% } %>
+    </ul>
+
+    <h3><a href="/products/new">create a product</a></h3>
+        </div>
+    </div>
+</body>
+</html>

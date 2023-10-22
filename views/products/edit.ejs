@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Edit Product</title>
+</head>
+
+<body>
+    <h1>Create your edit Product here!</h1>
+    <form action="/products/<%- product._id.toString()%>?_method=PUT" method="post">
+        <label>Enter Name:</label>
+        <input type="text" name="name" value="<%- product.name %>">
+        <label>Enter Price:</label>
+        <input type="number" name="price" value="<%- product.price %>">
+        <label for="">Enter category</label>
+        <input type="text" name="category" value="<%- product.category %>">
+        <button>Save</button>
+    </form>
+</body>
+
+</html>
